@@ -2,11 +2,6 @@
  * reset
  */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,25 +52,66 @@ table {
  * main
  */
 
-html, body, .Page {
+html, body {
     width: 100%;
     height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
     color: #5c5c5c;
-    min-width: 500px
+    min-width: 400px;
 }
 
 h1 {
-    font-weight: 700;
-    font-size: 25px;
-    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 100;
+    margin: 20px 0px 20px 0px;
+    text-transform: uppercase;
+}
+
+h2 {
+
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    margin: 15px 0;
+}
+
+h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 18px 0 15px 0;
+}
+
+h4 > span {
+    background: #FFCC66;
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 15px 0;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    padding-inline-start: 40px;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    padding-inline-start: 40px;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 16px;
     font-weight: 300;
     line-height: 20px;
-    padding: 5px 0;
 }
 
 /*
@@ -83,8 +119,42 @@ p {
  */
 
 .Page {
-    width: 100%;
+    max-width: 800px;
+    margin: 25px auto;
+}
+
+.Page_Title {
+
+}
+
+.Page_Menu {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.Page_SubTitle {
     text-align: center;
+}
+
+.Page_Content {
+    text-align: justify;
+}
+
+@media screen and (max-width: 850px) {
+    .Page {
+        width: 100%;
+        margin: 25px 0;
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Page {
+        padding: 0 15px;
+    }
 }
 
 /*
@@ -96,5 +166,297 @@ p {
 }
 
 .ErrorPage_Image {
-    max-width: 500px;
+    max-width: 400px;
+}
+
+/*
+ * Menu
+ */
+
+.Menu {
+    min-height: 43px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 1px solid #c0c9cc;
+    border-width: 1px 0px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.Menu_Item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    position: relative;
+    color: #5c5c5c;
+    min-height: 43px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.Menu_Item:first-child {
+    margin-left: 0px;
+}
+
+.Menu_Item:last-child {
+    margin-right: 0px;
+}
+
+.Menu_Item:hover:after {
+    content: ' ';
+    width: 100%;
+    border-bottom: 5px solid #c0c9cc;
+    position: absolute;
+    bottom: -2.5px;
+}
+
+.Menu_Item_active:after, .Menu_Item_active:hover:after {
+    content: ' ';
+    width: 100%;
+    border-bottom: 5px solid #be515a;
+    position: absolute;
+    bottom: -2.5px;
+}
+
+
+
+/*
+ * Link
+ */
+.Link {
+    color: #0070c0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.Link:after {
+    content: ' ';
+    border-bottom: 1px solid #0070c0;
+    position: relative;
+    height: 1px;
+    margin-bottom: -1px;
+    display: inline-block;
+    display: block;
+}
+
+.Link:hover:after {
+    border-bottom: 1px solid #fff0;
+}
+
+/*
+ * Text
+ */
+
+.Text {
+
+}
+
+.Text_danger {
+    color: red;
+    font-weight: 800;
+}
+
+.Text_underline {
+    display: inline-block;
+}
+
+.Text_underline:after {
+    content: ' ';
+    border-bottom: 1px solid #0070c0;
+    position: relative;
+    height: 1px;
+    margin-bottom: -1px;
+    display: inline-block;
+    display: block;
+}
+
+.Text_danger .Text_underline:after {
+    border-bottom: 1px solid red;
+}
+
+/*
+ * Accordion
+ */
+
+.Accordion {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.Accordion_Input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.Accordion_Section {
+    cursor: pointer;
+    background: #3f494c;
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 15px 0px 15px 44px;
+    position: relative;
+    height: 46px;
+}
+
+.Accordion_Section:before {
+    content: url(../img/paw_white.svg);
+    position: absolute;
+    left: 18px;
+}
+
+input.Accordion_Input:checked ~ .Accordion_Section {
+    background: #BE515A;
+}
+
+.Accordion_Section:after {
+    content: url(../img/expand.svg);
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    position: absolute;
+    top: 0px;
+    padding-top: 8px;
+    padding-left: 15px;
+    right: 15px;
+    height: 46px;
+    border-left: 1px solid white
+}
+
+input.Accordion_Input:checked ~ .Accordion_Section:after {
+    content: url(../img/collapse.svg);
+}
+
+.Accordion_Body {
+    max-height: 0;
+    transition: all .35s;
+}
+
+input.Accordion_Input:checked ~ .Accordion_Body {
+    max-height: 100vh;
+    transition: all 1.35s;
+}
+
+.Accordion_Body > div {
+    padding: 20px;
+}
+
+/*
+ * Header
+ */
+
+.Header {
+    height: 200px;
+    background: #be515a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.Header:before {
+    content: ' ';
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    background: url(../img/texture.jpg) bottom left repeat scroll;
+    min-width: 400px;
+}
+
+.Header:after {
+    content: ' ';
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    background: #be515a;
+    opacity: 0.90;
+    min-width: 400px;
+}
+
+.Header_Header, .Header_SubHeader {
+    display: block;
+    width: 800px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 36px;
+    z-index: 1;
+}
+
+.Header_Header {
+    font-weight: 100;
+}
+
+.Header_SubHeader {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 850px) {
+    .Header {
+    }
+    .Header_Header, .Header_SubHeader {
+        width: 100%;
+        padding: 0 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Header_Header, .Header_SubHeader {
+        padding: 0 15px;
+    }
+}
+
+/*
+ * Footer
+ */
+
+.Footer {
+    height: 100px;
+}
+
+.Footer:before {
+    content: ' ';
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background: url(../img/texture.jpg) bottom left repeat scroll;
+    opacity: 0.90;
+    min-width: 400px;
+}
+
+.Footer:after {
+    content: ' ';
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background: #c2c2c2;
+    opacity: 0.70;
+    min-width: 400px;
+}
+
+/*
+ * Layout
+ */
+
+.Layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Layout_Content {
+    flex: 1 0 auto;
+}
+
+.Layout_Footer {
+    flex: 0 0 auto;
 }
