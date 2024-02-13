@@ -226,6 +226,53 @@ li {
 }
 
 
+.Menu_Input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.Menu_Label {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .Menu {
+        display: block;
+    }
+
+    .Menu_Item {
+        display: none;
+    }
+
+    .Menu_Label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        position: relative;
+        color: #5c5c5c;
+        min-height: 43px;
+        text-decoration: none;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+    }
+
+    input.Menu_Input:checked ~ .Menu_Item {
+        display: flex;
+    }
+
+    input.Menu_Input:checked ~ .Menu_Item_active {
+        font-weight: 800;
+        color: #be515a;
+    }
+
+    input.Menu_Input:checked ~ .Menu_Item:after {
+        display: none;
+    }
+}
 
 /*
  * Link
@@ -259,7 +306,7 @@ li {
 }
 
 .Text_danger {
-    color: red;
+    color: #be515a;
     font-weight: 800;
 }
 
@@ -278,7 +325,7 @@ li {
 }
 
 .Text_danger .Text_underline:after {
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid #be515a;
 }
 
 /*
@@ -459,4 +506,21 @@ input.Accordion_Input:checked ~ .Accordion_Body {
 
 .Layout_Footer {
     flex: 0 0 auto;
+}
+
+/*
+ * Map
+ */
+
+.Map {
+    margin-top: 25px;
+    box-shadow: 5px 8px 10px -6px #c9c9c9
+}
+
+.Map > div {
+    display: flex;
+}
+
+.Map > div > iframe {
+    margin: 0 auto
 }
