@@ -52,12 +52,31 @@ table {
  * main
  */
 
+html {
+    --text-color: #5c5c5c;
+    --text-h4-background: #FFDE82;
+    --text-header-color: #fff;
+    --text-danger-color: #BE2F39;
+    --accent-color: #1D753A;
+    --border-color: #c0c9cc;
+    --link-color: #0074A7;
+    --accordion-background: #3f494c;
+    --footer-background: #EBECE0;
+    --transparent: #fff0;
+    --shadow: 5px 8px 10px -6px #c9c9c9;
+
+    --page-width: 800px;
+    --page-min-width: 400px;
+    --header-height: 200px;
+    --footer-height: 100px;
+}
+
 html, body {
     width: 100%;
     height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
-    color: #5c5c5c;
-    min-width: 400px;
+    color: var(--text-color);
+    min-width: var(--page-min-width);
 }
 
 h1 {
@@ -85,7 +104,7 @@ h4 {
 }
 
 h4 > span {
-    background: #FFCC66;
+    background: var(--text-h4-background);
 }
 
 p {
@@ -119,7 +138,7 @@ li {
  */
 
 .Page {
-    max-width: 800px;
+    max-width: var(--page-width);
     margin: 25px auto;
 }
 
@@ -163,11 +182,23 @@ li {
  */
 
 .ErrorPage {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin: 20px;
 }
 
 .ErrorPage_Image {
-    max-width: 400px;
+    opacity: 0.8;
+    max-width:100%;
+    max-height:100%;
+}
+
+.ErrorPage_Title {
+    font-weight: 100;
+    font-size: 30px;
 }
 
 /*
@@ -178,7 +209,7 @@ li {
     min-height: 43px;
     text-transform: uppercase;
     font-size: 13px;
-    border: 1px solid #c0c9cc;
+    border: 1px solid var(--border-color);
     border-width: 1px 0px 1px;
     display: flex;
     flex-direction: row;
@@ -194,7 +225,7 @@ li {
     align-items: center;
     font-weight: 200;
     position: relative;
-    color: #5c5c5c;
+    color: var(--text-color);
     min-height: 43px;
     text-decoration: none;
     margin-left: 5px;
@@ -213,7 +244,7 @@ li {
 .Menu_Item:hover:after {
     content: ' ';
     width: 100%;
-    border-bottom: 5px solid #c0c9cc;
+    border-bottom: 5px solid var(--border-color);
     position: absolute;
     bottom: -2.5px;
 }
@@ -221,7 +252,7 @@ li {
 .Menu_Item_active:after, .Menu_Item_active:hover:after {
     content: ' ';
     width: 100%;
-    border-bottom: 5px solid #be515a;
+    border-bottom: 5px solid var(--accent-color);
     position: absolute;
     bottom: -2.5px;
 }
@@ -253,7 +284,7 @@ li {
         align-items: center;
         font-weight: 800;
         position: relative;
-        color: #5c5c5c;
+        color: var(--text-color);
         min-height: 43px;
         text-decoration: none;
         margin-left: 5px;
@@ -267,7 +298,7 @@ li {
 
     input.Menu_Input:checked ~ .Menu_Item_active {
         font-weight: 800;
-        color: #be515a;
+        color: var(--accent-color);
     }
 
     input.Menu_Input:checked ~ .Menu_Item:after {
@@ -279,14 +310,14 @@ li {
  * Link
  */
 .Link {
-    color: #0070c0;
+    color: var(--link-color);
     text-decoration: none;
     display: inline-block;
 }
 
 .Link:after {
     content: ' ';
-    border-bottom: 1px solid #0070c0;
+    border-bottom: 1px solid var(--link-color);
     position: relative;
     height: 1px;
     margin-bottom: -1px;
@@ -295,7 +326,7 @@ li {
 }
 
 .Link:hover:after {
-    border-bottom: 1px solid #fff0;
+    border-bottom: 1px solid var(--transparent);
 }
 
 /*
@@ -307,7 +338,7 @@ li {
 }
 
 .Text_danger {
-    color: #be515a;
+    color: var(--text-danger-color);
     font-weight: 800;
 }
 
@@ -317,7 +348,7 @@ li {
 
 .Text_underline:after {
     content: ' ';
-    border-bottom: 1px solid #0070c0;
+    border-bottom: 1px solid var(--link-color);
     position: relative;
     height: 1px;
     margin-bottom: -1px;
@@ -326,7 +357,7 @@ li {
 }
 
 .Text_danger .Text_underline:after {
-    border-bottom: 1px solid #be515a;
+    border-bottom: 1px solid var(--text-danger-color);
 }
 
 /*
@@ -346,7 +377,7 @@ li {
 
 .Accordion_Section {
     cursor: pointer;
-    background: #3f494c;
+    background: var(--accordion-background);
     display: block;
     color: white;
     text-transform: uppercase;
@@ -363,7 +394,7 @@ li {
 }
 
 input.Accordion_Input:checked ~ .Accordion_Section {
-    background: #BE515A;
+    background: var(--accent-color);
 }
 
 .Accordion_Section:after {
@@ -403,8 +434,8 @@ input.Accordion_Input:checked ~ .Accordion_Body {
  */
 
 .Header {
-    height: 200px;
-    background: #be515a;
+    height: var(--header-height);
+    background: var(--accent-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -412,29 +443,29 @@ input.Accordion_Input:checked ~ .Accordion_Body {
     flex-wrap: nowrap;
 }
 
-.Header:before {
-    content: ' ';
-    position: absolute;
-    height: 200px;
-    width: 100%;
-    background: url(../img/texture.jpg) bottom left repeat scroll;
-    min-width: 400px;
-}
-
 .Header:after {
     content: ' ';
     position: absolute;
-    height: 200px;
+    height: var(--header-height);
     width: 100%;
-    background: #be515a;
-    opacity: 0.90;
-    min-width: 400px;
+    opacity: 0.15;
+    background: url(../img/texture3.png) bottom left repeat scroll;
+    min-width: var(--page-min-width);
+}
+
+.Header:before {
+    content: ' ';
+    position: absolute;
+    height: var(--header-height);
+    width: 100%;
+    background: var(--accent-color);
+    min-width: var(--page-min-width);
 }
 
 .Header_Header, .Header_SubHeader {
     display: block;
-    width: 800px;
-    color: #fff;
+    width: var(--page-width);
+    color: var(--text-header-color);
     text-transform: uppercase;
     font-size: 36px;
     z-index: 1;
@@ -442,14 +473,17 @@ input.Accordion_Input:checked ~ .Accordion_Body {
 
 .Header_Header {
     font-weight: 100;
+    margin-bottom: 5px;
 }
 
 .Header_SubHeader {
     font-weight: 600;
+    margin-top: 5px;
 }
 
 @media screen and (max-width: 850px) {
     .Header {
+
     }
     .Header_Header, .Header_SubHeader {
         width: 100%;
@@ -468,27 +502,26 @@ input.Accordion_Input:checked ~ .Accordion_Body {
  */
 
 .Footer {
-    height: 100px;
-}
-
-.Footer:before {
-    content: ' ';
-    position: absolute;
-    height: 100px;
-    width: 100%;
-    background: url(../img/texture.jpg) bottom left repeat scroll;
-    opacity: 0.90;
-    min-width: 400px;
+    height: var(--footer-height);
 }
 
 .Footer:after {
     content: ' ';
     position: absolute;
-    height: 100px;
+    height: var(--footer-height);
     width: 100%;
-    background: #c2c2c2;
-    opacity: 0.70;
-    min-width: 400px;
+    opacity: 0.1;
+    background: url(../img/texture3.png) bottom left repeat scroll;
+    min-width: var(--page-min-width);
+}
+
+.Footer:before {
+    content: ' ';
+    position: absolute;
+    height: var(--footer-height);
+    width: 100%;
+    background: var(--footer-background);
+    min-width: var(--page-min-width);
 }
 
 /*
@@ -515,7 +548,7 @@ input.Accordion_Input:checked ~ .Accordion_Body {
 
 .Map {
     margin-top: 25px;
-    box-shadow: 5px 8px 10px -6px #c9c9c9
+    box-shadow: var(--shadow);
 }
 
 .Map > div {
