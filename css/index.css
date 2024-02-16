@@ -625,12 +625,12 @@ input.Judges_Input:checked ~ .Judges_Body {
 
 .BadgeType1 {
     display: block;
-    width: calc(100% + 10px);
+    width: calc(100% + 8px);
     height: 30px;
     line-height: 30px;
     text-align: center;
-    margin-left: -5px;
-    margin-right: -5px;
+    margin-left: -4px;
+    margin-right: -4px;
     background: #FFDE82;
     font-weight: 200;
     font-size: 15px;
@@ -662,19 +662,19 @@ input.Judges_Input:checked ~ .Judges_Body {
 .BadgeType1:before {
     height: 0;
     width: 0;
-    bottom: -5px;
+    bottom: -4px;
     left: 0;
-    border-top: 5px solid #917319;
-    border-left: 5px solid transparent;
+    border-top: 4px solid #917319;
+    border-left: 4px solid transparent;
 }
 
 .BadgeType1:after {
     height: 0;
     width: 0;
     right: 0;
-    bottom: -5px;
-    border-top: 5px solid #917319;
-    border-right: 5px solid transparent;
+    bottom: -4px;
+    border-top: 4px solid #917319;
+    border-right: 4px solid transparent;
 }
 
 .BadgeType2 {
@@ -683,7 +683,7 @@ input.Judges_Input:checked ~ .Judges_Body {
     line-height: 30px;
     padding-left: 15px;
     position: absolute;
-    right: -5px;
+    right: -4px;
     bottom: 60px;
     background: #F6EDD9;
     font-weight: 200;
@@ -716,26 +716,26 @@ input.Judges_Input:checked ~ .Judges_Body {
 .BadgeType2:before {
     height: 0;
     width: 0;
-    bottom: -5px;
+    bottom: -4px;
     right: 0px;
-    border-top: 5px solid #554e40;
-    border-right: 5px solid transparent;
+    border-top: 4px solid #554e40;
+    border-right: 4px solid transparent;
 }
 
 .BadgeType2:after {
     height: 0;
     width: 0;
-    left: -7px;
+    left: -6px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 7px solid #F6EDD9;
+    border-right: 6px solid #F6EDD9;
 }
 
 @media screen and (max-width: 450px) {
     .BadgeType2:after {
-        left: -5px;
+        left: -6px;
         border-top: 11px solid transparent;
         border-bottom: 11px solid transparent;
-        border-right: 5px solid #F6EDD9;
+        border-right: 6px solid #F6EDD9;
     }
 }
