@@ -105,6 +105,7 @@ h4 {
 
 h4 > span {
     background: var(--text-h4-background);
+    padding: 0 2px;
 }
 
 p {
@@ -431,11 +432,15 @@ input.Judges_Input:checked ~ .Judges_Body {
 }
 
 .Judges_Photo {
-    width: 100%;
     max-width: 300px;
     float: left;
     margin-right: 20px;
     margin-bottom: 10px;
+    position: relative;
+}
+
+.Judges_Photo img {
+    width: 100%;
 }
 
 @media screen and (max-width: 650px) {
@@ -612,4 +617,108 @@ input.Judges_Input:checked ~ .Judges_Body {
 
 .Map > div > iframe {
     margin: 0 auto
+}
+
+/*
+ * Badge
+ */
+
+.BadgeType1 {
+    display: block;
+    width: calc(100% + 10px);
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: -5px;
+    margin-right: -5px;
+    background: #FFDE82;
+    font-weight: 200;
+    font-size: 15px;
+    position: absolute;
+    bottom: 20px;
+    box-shadow: 2px 2px 4px 0px rgba(34, 60, 80, 0.2);
+}
+
+@media screen and (max-width: 650px) {
+    .BadgeType1 {
+        bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .BadgeType1 {
+        bottom: 10px;
+    }
+}
+
+.BadgeType1:before, .BadgeType1:after {
+    content: "";
+    position: absolute;
+}
+
+.BadgeType1:before {
+    height: 0;
+    width: 0;
+    bottom: -5px;
+    left: 0;
+    border-top: 5px solid #917319;
+    border-left: 5px solid transparent;
+}
+
+.BadgeType1:after {
+    height: 0;
+    width: 0;
+    right: 0;
+    bottom: -5px;
+    border-top: 5px solid #917319;
+    border-right: 5px solid transparent;
+}
+
+.BadgeType2 {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+    position: absolute;
+    right: -5px;
+    bottom: 60px;
+    background: #F6EDD9;
+    font-weight: 200;
+    font-size: 15px;
+    box-shadow: 2px 2px 4px 0px rgba(34, 60, 80, 0.2);
+}
+
+@media screen and (max-width: 650px) {
+    .BadgeType2 {
+        bottom: 55px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .BadgeType2 {
+        bottom: 50px;
+    }
+}
+
+.BadgeType2:before, .BadgeType2:after {
+    content: "";
+    position: absolute;
+}
+
+.BadgeType2:before {
+    height: 0;
+    width: 0;
+    bottom: -5px;
+    right: 0px;
+    border-top: 5px solid #554e40;
+    border-right: 5px solid transparent;
+}
+
+.BadgeType2:after {
+    height: 0;
+    width: 0;
+    left: -7px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 7px solid #F6EDD9;
 }
