@@ -60,7 +60,7 @@ html {
     --accent-color: #1D753A;
     --border-color: #c0c9cc;
     --link-color: #0074A7;
-    --accordion-background: #3f494c;
+    --judges-background: #3f494c;
     --footer-background: #EBECE0;
     --transparent: #fff0;
     --shadow: 5px 8px 10px -6px #c9c9c9;
@@ -361,23 +361,23 @@ li {
 }
 
 /*
- * Accordion
+ * Judges
  */
 
-.Accordion {
+.Judges {
     overflow: hidden;
     margin-bottom: 10px;
 }
 
-.Accordion_Input {
+.Judges_Input {
     position: absolute;
     opacity: 0;
     z-index: -1;
 }
 
-.Accordion_Section {
+.Judges_Section {
     cursor: pointer;
-    background: var(--accordion-background);
+    background: var(--judges-background);
     display: block;
     color: white;
     text-transform: uppercase;
@@ -387,17 +387,17 @@ li {
     height: 46px;
 }
 
-.Accordion_Section:before {
+.Judges_Section:before {
     content: url(../img/paw_white.svg);
     position: absolute;
     left: 18px;
 }
 
-input.Accordion_Input:checked ~ .Accordion_Section {
+input.Judges_Input:checked ~ .Judges_Section {
     background: var(--accent-color);
 }
 
-.Accordion_Section:after {
+.Judges_Section:after {
     content: url(../img/expand.svg);
     font-size: 25px;
     font-weight: 800;
@@ -411,23 +411,78 @@ input.Accordion_Input:checked ~ .Accordion_Section {
     border-left: 1px solid white
 }
 
-input.Accordion_Input:checked ~ .Accordion_Section:after {
+input.Judges_Input:checked ~ .Judges_Section:after {
     content: url(../img/collapse.svg);
 }
 
-.Accordion_Body {
+.Judges_Body {
     max-height: 0;
     transition: all .35s;
+    overflow: hidden;
 }
 
-input.Accordion_Input:checked ~ .Accordion_Body {
+input.Judges_Input:checked ~ .Judges_Body {
     max-height: 100vh;
     transition: all 1.35s;
 }
 
-.Accordion_Body > div {
-    padding: 20px;
+.Judges_Content {
+    padding: 20px 5px;
 }
+
+.Judges_Photo {
+    width: 100%;
+    max-width: 300px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 650px) {
+    .Judges_Photo {
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .Judges_Photo {
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+}
+
+/*
+ * Quote
+ */
+
+.Quote {
+
+}
+
+.Quote_Icon {
+    width: 100%;
+    max-width: 50px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.Quote_Content > p:first-child {
+    margin-top: 0
+}
+
+.Quote_Content > p {
+    margin: 10px 0;
+}
+
+.Quote_Author {
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 25px;
+    float: right;
+    margin-top: 20px;
+}
+
 
 /*
  * Header
