@@ -375,6 +375,11 @@ li {
     padding: 15px 0px 15px 44px;
     position: relative;
     height: 46px;
+    font-weight: 600;
+}
+
+.Judges_Section span {
+    font-weight: 200;
 }
 
 .Judges_Section:before {
