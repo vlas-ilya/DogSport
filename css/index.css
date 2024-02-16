@@ -64,6 +64,11 @@ html {
     --footer-background: #EBECE0;
     --transparent: #fff0;
     --shadow: 5px 8px 10px -6px #c9c9c9;
+    --badge_type_1_background: #FFDE82;
+    --badge_type_1_background2: #917319;
+    --badge_type_2_background: #F6EDD9;
+    --badge_type_2_background2: #554e40;
+
 
     --page-width: 800px;
     --page-min-width: 400px;
@@ -388,11 +393,12 @@ input.Judges_Input:checked ~ .Judges_Section {
     color: white;
     position: absolute;
     top: 0px;
-    padding-top: 8px;
+    padding-top: 9px;
     padding-left: 15px;
     right: 15px;
     height: 46px;
-    border-left: 1px solid white
+    border-left: 1px solid white;
+    box-sizing: border-box;
 }
 
 input.Judges_Input:checked ~ .Judges_Section:after {
@@ -452,7 +458,8 @@ input.Judges_Input:checked ~ .Judges_Body {
     max-width: 50px;
     float: left;
     margin-right: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .Quote_Content > p:first-child {
@@ -615,7 +622,7 @@ input.Judges_Input:checked ~ .Judges_Body {
     text-align: center;
     margin-left: -4px;
     margin-right: -4px;
-    background: #FFDE82;
+    background: var(--badge_type_1_background);
     font-weight: 200;
     font-size: 15px;
     position: absolute;
@@ -648,7 +655,7 @@ input.Judges_Input:checked ~ .Judges_Body {
     width: 0;
     bottom: -4px;
     left: 0;
-    border-top: 4px solid #917319;
+    border-top: 4px solid var(--badge_type_1_background2);
     border-left: 4px solid transparent;
 }
 
@@ -657,7 +664,7 @@ input.Judges_Input:checked ~ .Judges_Body {
     width: 0;
     right: 0;
     bottom: -4px;
-    border-top: 4px solid #917319;
+    border-top: 4px solid var(--badge_type_1_background2);
     border-right: 4px solid transparent;
 }
 
@@ -669,7 +676,7 @@ input.Judges_Input:checked ~ .Judges_Body {
     position: absolute;
     right: -4px;
     bottom: 60px;
-    background: #F6EDD9;
+    background: var(--badge_type_2_background);
     font-weight: 200;
     font-size: 15px;
     box-shadow: 2px 2px 4px 0px rgba(34, 60, 80, 0.2);
@@ -702,7 +709,7 @@ input.Judges_Input:checked ~ .Judges_Body {
     width: 0;
     bottom: -4px;
     right: 0px;
-    border-top: 4px solid #554e40;
+    border-top: 4px solid var(--badge_type_2_background2);
     border-right: 4px solid transparent;
 }
 
@@ -712,7 +719,7 @@ input.Judges_Input:checked ~ .Judges_Body {
     left: -6px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 6px solid #F6EDD9;
+    border-right: 6px solid var(--badge_type_2_background);
 }
 
 @media screen and (max-width: 450px) {
@@ -720,6 +727,6 @@ input.Judges_Input:checked ~ .Judges_Body {
         left: -6px;
         border-top: 11px solid transparent;
         border-bottom: 11px solid transparent;
-        border-right: 6px solid #F6EDD9;
+        border-right: 6px solid var(--badge_type_2_background);
     }
 }
