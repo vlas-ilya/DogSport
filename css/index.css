@@ -648,6 +648,9 @@ input.Judges_Input:checked ~ .Judges_Body {
 @media screen and (max-width: 450px) {
     .BadgeType1 {
         bottom: 10px;
+        height: 23px;
+        line-height: 23px;
+        font-size: 12px;
     }
 }
 
@@ -691,12 +694,17 @@ input.Judges_Input:checked ~ .Judges_Body {
 @media screen and (max-width: 650px) {
     .BadgeType2 {
         bottom: 55px;
+        width: 90px;
     }
 }
 
 @media screen and (max-width: 450px) {
     .BadgeType2 {
-        bottom: 50px;
+        bottom: 40px;
+        height: 22px;
+        width: 70px;
+        line-height: 22px;
+        font-size: 12px;
     }
 }
 
@@ -721,4 +729,13 @@ input.Judges_Input:checked ~ .Judges_Body {
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
     border-right: 7px solid #F6EDD9;
+}
+
+@media screen and (max-width: 450px) {
+    .BadgeType2:after {
+        left: -5px;
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-right: 5px solid #F6EDD9;
+    }
 }
