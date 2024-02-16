@@ -319,6 +319,7 @@ li {
 /*
  * Link
  */
+
 .Link {
     color: var(--link-color);
     text-decoration: underline;
@@ -473,8 +474,13 @@ input.Judges_Input:checked ~ .Judges_Body {
     max-width: 50px;
     float: left;
     margin-right: 15px;
-    margin-bottom: 5px;
     margin-top: 5px;
+}
+
+@media screen and (max-width: 650px) {
+    .Quote_Icon {
+        max-width: 45px;
+    }
 }
 
 .Quote_Content > p:first-child {

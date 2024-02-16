@@ -1,0 +1,20 @@
+{
+  "short_name": "Обидиенс во Владимире",
+  "name": "Всероссийские соревнования по обидиенс состоятся во Владимире с 12 по 14 июля, на стадионе «Лыбедь», в центре города",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1D753A",
+  "background_color": "#ffffff"
+}
