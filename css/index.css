@@ -318,6 +318,7 @@ li {
     color: var(--link-color);
     text-decoration: underline;
     text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
 }
 
 .Link:hover {
@@ -340,6 +341,7 @@ li {
 .Text_underline {
     text-decoration: underline;
     text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
 }
 
 /*
