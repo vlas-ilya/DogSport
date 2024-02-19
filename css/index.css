@@ -69,11 +69,52 @@ html {
     --badge_type_2_background: #F6EDD9;
     --badge_type_2_background2: #554e40;
 
-
     --page-width: 800px;
-    --page-min-width: 400px;
+    --page-min-width: 320px;
     --header-height: 200px;
     --footer-height: 100px;
+
+    --h1-font-size: 36px;
+    --h1-margin: 20px 0px 20px 0px;
+    --h3-font-size: 16px;
+    --h3-line-height: 20px;
+    --h4-font-size: 18px;
+    --h4-margin: 18px 0 15px 0;
+    --p-font-size: 16px;
+    --p-line-height: 22px;
+    --p-margin: 15px 0;
+    --ul-padding-inline-start: 40px;
+    --li-margin: 10px 0;
+    --li-font-size: 16px;
+    --li-line-height: 20px;
+    --Header_Header-font-size: 36px;
+    --Header_Header-margin: 5px;
+    --Quote_Author-font-size: 20px;
+    --Quote_Author-line-height: 25px;
+    --Quote_Author-margin-top: 10px;
+    --Quote_Author-margin-bottom: 20px;
+
+    @media screen and (max-width: 400px) {
+        --h1-font-size: 32px;
+        --h1-margin: 18px 0px 18px 0px;
+        --h3-font-size: 14px;
+        --h3-line-height: 18px;
+        --h4-font-size: 16px;
+        --h4-margin: 16px 0 13px 0;
+        --p-font-size: 14px;
+        --p-line-height: 20px;
+        --p-margin: 13px 0;
+        --ul-padding-inline-start: 35px;
+        --li-margin: 8px 0;
+        --li-font-size: 14px;
+        --li-line-height: 18px;
+        --Header_Header-font-size: 32px;
+        --Header_Header-margin: 3px;
+        --Quote_Author-font-size: 18px;
+        --Quote_Author-line-height: 23px;
+        --Quote_Author-margin-top: 8px;
+        --Quote_Author-margin-bottom: 16px;
+    }
 }
 
 html, body {
@@ -85,9 +126,9 @@ html, body {
 }
 
 h1 {
-    font-size: 36px;
-    font-weight: 100;
-    margin: 20px 0px 20px 0px;
+    font-size: var(--h1-font-size);
+    font-weight: 200;
+    margin: var(--h1-margin);
     text-transform: uppercase;
 }
 
@@ -96,14 +137,14 @@ h2 {
 }
 
 h3 {
-    font-size: 16px;
+    font-size: var(--h3-font-size);
     font-weight: 800;
-    line-height: 20px;
+    line-height: var(--h3-line-height);
     margin: 15px 0;
 }
 
 h4 {
-    font-size: 18px;
+    font-size: var(--h4-font-size);
     text-transform: uppercase;
     margin: 18px 0 15px 0;
 }
@@ -114,29 +155,29 @@ h4 > span {
 }
 
 p {
-    font-size: 16px;
+    font-size: var(--p-font-size);
     font-weight: 300;
-    line-height: 22px;
-    margin: 15px 0;
+    line-height: var(--p-line-height);
+    margin: var(--p-margin);
 }
 
 ul {
     display: block;
     list-style-type: disc;
-    padding-inline-start: 40px;
+    padding-inline-start: var(--ul-padding-inline-start);
 }
 
 ol {
     display: block;
     list-style-type: decimal;
-    padding-inline-start: 40px;
+    padding-inline-start: var(--ul-padding-inline-start);
 }
 
 li {
-    margin: 10px 0;
-    font-size: 16px;
+    margin: var(--li-margin);
+    font-size: var(--li-font-size);
     font-weight: 300;
-    line-height: 20px;
+    line-height: var(--li-line-height);
 }
 
 /*
@@ -279,26 +320,40 @@ li {
 
 @media screen and (max-width: 600px) {
     .Menu {
-        display: flex;
-        position: fixed;
-        width: 100%;
-        left: 0;
-        z-index: 100;
-        background: white;
-        bottom: 0px;
-        border-bottom: 0;
-        align-items: center;
-        justify-content: space-around;
+        display: block;
     }
 
     .Menu_Item {
-        display: flex;
-        font-size: 8px;
+        display: none;
+        padding: 0;
     }
 
-    .Menu_Item_active {
+    .Menu_Label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        position: relative;
+        color: var(--text-color);
+        min-height: 43px;
+        text-decoration: none;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+    }
+
+    input.Menu_Input:checked ~ .Menu_Item {
+        display: flex;
+    }
+
+    input.Menu_Input:checked ~ .Menu_Item_active {
         font-weight: 800;
         color: var(--accent-color);
+    }
+
+    input.Menu_Input:checked ~ .Menu_Item:after {
+        display: none;
     }
 }
 
@@ -483,12 +538,12 @@ input.Judges_Input:checked ~ .Judges_Body {
 }
 
 .Quote_Author {
-    font-size: 20px;
+    font-size: var(--Quote_Author-font-size);
     font-weight: 200;
-    line-height: 25px;
+    line-height: var(--Quote_Author-line-height);
     float: right;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: var(--Quote_Author-margin-top);
+    margin-bottom: var(--Quote_Author-margin-bottom);
 }
 
 
@@ -530,18 +585,18 @@ input.Judges_Input:checked ~ .Judges_Body {
     width: var(--page-width);
     color: var(--text-header-color);
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: var(--Header_Header-font-size);
     z-index: 1;
 }
 
 .Header_Header {
     font-weight: 100;
-    margin-bottom: 5px;
+    margin-bottom: var(--Header_Header-margin);
 }
 
 .Header_SubHeader {
     font-weight: 600;
-    margin-top: 5px;
+    margin-top: var(--Header_Header-margin);
 }
 
 @media screen and (max-width: 850px) {
