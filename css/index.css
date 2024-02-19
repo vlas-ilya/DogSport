@@ -279,40 +279,26 @@ li {
 
 @media screen and (max-width: 600px) {
     .Menu {
-        display: block;
+        display: flex;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        z-index: 100;
+        background: white;
+        bottom: 0px;
+        border-bottom: 0;
+        align-items: center;
+        justify-content: space-around;
     }
 
     .Menu_Item {
-        display: none;
-        padding: 0;
-    }
-
-    .Menu_Label {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-weight: 800;
-        position: relative;
-        color: var(--text-color);
-        min-height: 43px;
-        text-decoration: none;
-        margin-left: 5px;
-        margin-right: 5px;
-        text-align: center;
+        font-size: 8px;
     }
 
-    input.Menu_Input:checked ~ .Menu_Item {
-        display: flex;
-    }
-
-    input.Menu_Input:checked ~ .Menu_Item_active {
+    .Menu_Item_active {
         font-weight: 800;
         color: var(--accent-color);
-    }
-
-    input.Menu_Input:checked ~ .Menu_Item:after {
-        display: none;
     }
 }
 
