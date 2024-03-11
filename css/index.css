@@ -942,15 +942,18 @@ input.Accordion_Input:checked~.Accordion_Body {
 
 @media screen and (max-width: 550px) {
     .Address_Name {
+        font-weight: 300;
         font-size: 22px;
     }
 
     .Address_Address {
+        font-weight: 300;
         font-size: 16px;
         line-height: 20px;
     }
 
     .Address_Info {
+        font-weight: 300;
         font-size: 14px;
     }
 }
