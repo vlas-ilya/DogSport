@@ -936,8 +936,39 @@ input.Accordion_Input:checked~.Accordion_Body {
     text-align: right;
 }
 
-.Address_Info::first-child {
+.Address_Info:first-child {
     margin-top: 20px;
+}
+
+@media screen and (max-width: 550px) {
+    .Address_Name {
+        font-size: 22px;
+    }
+
+    .Address_Address {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .Address_Info {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .Address_Name {
+        font-size: 20px;
+    }
+
+    .Address_Address {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .Address_Info {
+        font-size: 13px;
+    }
 }
 
 /*
