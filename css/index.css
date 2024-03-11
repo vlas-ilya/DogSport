@@ -268,6 +268,10 @@ li {
     line-height: var(--li-line-height);
 }
 
+strong {
+    font-weight: 600;
+}
+
 /*
  * Page
  */
@@ -592,6 +596,10 @@ input.Accordion_Input:checked~.Accordion_Body {
         max-height: 150px;
         margin-bottom: 10px;
     }
+}
+
+.Accordion_Description {
+    padding: 0 10px;
 }
 
 /*
@@ -922,10 +930,14 @@ input.Accordion_Input:checked~.Accordion_Body {
 }
 
 .Address_Info {
-    margin-top: 20px;
+    margin-top: 5px;
     font-size: 16px;
     font-weight: 200;
     text-align: right;
+}
+
+.Address_Info::first-child {
+    margin-top: 20px;
 }
 
 /*
@@ -983,4 +995,19 @@ input.Accordion_Input:checked~.Accordion_Body {
 
 .ModalWindow_Сlose:hover {
     color: rgb(75, 75, 75);
+}
+
+/*
+ * Logo
+ */
+
+.Logo {
+    display: flex;
+    justify-content: center;
+}
+
+.Logo_Image {
+    width: 100%;
+    max-width: 400px;
+    opacity: 0.9;
 }
