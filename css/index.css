@@ -573,7 +573,8 @@ input.Accordion_Input:checked~.Accordion_Body {
 
 .Accordion_Photo img {
     width: 100%;
-    position: relative
+    position: relative;
+    box-shadow: var(--shadow);
 }
 
 .Accordion_Photo:hover:after {
