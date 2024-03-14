@@ -215,6 +215,10 @@ body {
     min-width: var(--page-min-width);
 }
 
+.clear {
+    clear: both;
+}
+
 h1 {
     font-size: var(--h1-font-size);
     font-weight: 200;
@@ -761,7 +765,6 @@ input.Accordion_Input:checked~.Accordion_Body {
  */
 
 .Map {
-    margin: 10px;
     box-shadow: var(--shadow);
 }
 
@@ -904,6 +907,13 @@ input.Accordion_Input:checked~.Accordion_Body {
 
 .Address {
     margin: 10px;
+    clear: both;
+    position: relative;
+    padding-top: 10px;
+}
+
+.Address:first-child {
+    padding-top: 0;
 }
 
 .Address_Name {
@@ -994,6 +1004,10 @@ input.Accordion_Input:checked~.Accordion_Body {
     padding-right: 10px;
 }
 
+.ModalWindow .Map {
+    margin: 10px;
+}
+
 .ModalWindow:target {
     visibility: visible;
     opacity: 1;
@@ -1044,4 +1058,97 @@ input.Accordion_Input:checked~.Accordion_Body {
     width: 100%;
     max-width: 400px;
     opacity: 0.9;
+}
+
+.TimeLine {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.TimeLine_Item {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.TimeLine_Item:last-child {
+    padding-bottom: 0px;
+}
+
+.TimeLine_Item::before {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    border-left: 1px solid var(--text-color);
+    left: -20px;
+}
+
+.TimeLine_Item:first-child::before {
+    top: 2px;
+}
+
+.TimeLine_Item:last-child::before {
+    height: 2px;
+}
+
+.TimeLine_Time {
+    font-size: 14px;
+    font-weight: 200;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.TimeLine_Time::before {
+    content: " ";
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    background: var(--text-color);
+    left: -25px;
+    top: 2px;
+}
+
+.TimeLine_Content {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 5px;
+}
+
+.Address::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.Seporator {
+    width: 70px;
+    height: 7px;
+    margin: 0 auto;
+    background: var(--accent-color);
+    border: none;
+    position: relative;
+    overflow: visible;
+}
+
+.Seporator::before, .Seporator::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 1px;
+    width: 55px;
+    border-bottom: 1px solid var(--accent-color);
+    top: 2px;
+}
+
+.Seporator::before {
+    left: -60px;
+}
+
+.Seporator::after {
+    right: -60px;
 }
