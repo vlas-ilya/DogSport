@@ -1155,3 +1155,27 @@ input.Accordion_Input:checked~.Accordion_Body {
 .Seporator::after {
     right: -60px;
 }
+
+
+/*
+ * Footnote
+ */
+
+.Footnote {
+    position: relative;
+}
+
+.Footnote::before {
+    content: '*';
+    position: absolute;
+    left: 13px;
+    top: 20px;
+    font-size: 40px;
+    line-height: 0px;
+}
+
+.Footnote_Content {
+    margin-left: 40px;
+    font-weight: 200;
+    font-size: 14px;
+}
