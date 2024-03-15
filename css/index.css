@@ -575,6 +575,7 @@ input.Accordion_Input:checked~.Accordion_Body {
     width: 100%;
     position: relative;
     box-shadow: var(--shadow);
+    margin-bottom: -2px;
 }
 
 .Accordion_Photo:hover:after {
@@ -759,6 +760,7 @@ input.Accordion_Input:checked~.Accordion_Body {
 
 .Layout_Footer {
     flex: 0 0 auto;
+    margin-top: 20px;
 }
 
 /*
