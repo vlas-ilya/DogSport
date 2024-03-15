@@ -900,7 +900,6 @@ input.Accordion_Input:checked~.Accordion_Body {
 
 @media screen and (max-width: 450px) {
     .BadgeType2:after {
-        left: -6px;
         border-top: 11px solid transparent;
         border-bottom: 11px solid transparent;
         border-right: 6px solid var(--badge_type_2_background);
