@@ -840,7 +840,7 @@ input.Accordion_Input:checked~.Accordion_Body {
 }
 
 .BadgeType2 {
-    width: 130px;
+    padding-right: 10px;
     height: 30px;
     line-height: 30px;
     padding-left: 15px;
@@ -857,8 +857,8 @@ input.Accordion_Input:checked~.Accordion_Body {
 @media screen and (max-width: 650px) {
     .BadgeType2 {
         padding-left: 5px;
+        padding-right: 5px;
         bottom: 55px;
-        width: 100px;
         font-size: 13px;
     }
 }
@@ -866,9 +866,9 @@ input.Accordion_Input:checked~.Accordion_Body {
 @media screen and (max-width: 450px) {
     .BadgeType2 {
         padding-left: 5px;
+        padding-right: 5px;
         bottom: 40px;
         height: 22px;
-        width: 81px;
         line-height: 22px;
         font-size: 10px;
     }
