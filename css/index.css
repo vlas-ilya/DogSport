@@ -856,18 +856,21 @@ input.Accordion_Input:checked~.Accordion_Body {
 
 @media screen and (max-width: 650px) {
     .BadgeType2 {
+        padding-left: 5px;
         bottom: 55px;
-        width: 90px;
+        width: 100px;
+        font-size: 13px;
     }
 }
 
 @media screen and (max-width: 450px) {
     .BadgeType2 {
+        padding-left: 5px;
         bottom: 40px;
         height: 22px;
-        width: 70px;
+        width: 80px;
         line-height: 22px;
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
@@ -1155,7 +1158,6 @@ input.Accordion_Input:checked~.Accordion_Body {
 .Seporator::after {
     right: -60px;
 }
-
 
 /*
  * Footnote
