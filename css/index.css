@@ -171,7 +171,7 @@ html {
     --p-font-size: 16px;
     --p-line-height: 22px;
     --p-margin: 15px 0;
-    --ul-padding-inline-start: 40px;
+    --ul-padding-inline-start: 35px;
     --li-margin: 10px 0;
     --li-font-size: 16px;
     --li-line-height: 20px;
@@ -193,7 +193,7 @@ html {
         --p-font-size: 14px;
         --p-line-height: 20px;
         --p-margin: 13px 0;
-        --ul-padding-inline-start: 35px;
+        --ul-padding-inline-start: 30px;
         --li-margin: 8px 0;
         --li-font-size: 14px;
         --li-line-height: 18px;
@@ -270,6 +270,7 @@ li {
     font-size: var(--li-font-size);
     font-weight: 300;
     line-height: var(--li-line-height);
+    padding-left: 5px;
 }
 
 strong {
@@ -892,17 +893,16 @@ input.Accordion_Input:checked~.Accordion_Body {
 .BadgeType2:after {
     height: 0;
     width: 0;
-    left: -6px;
+    left: -8px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 6px solid var(--badge_type_2_background);
+    border-right: 8px solid var(--badge_type_2_background);
 }
 
 @media screen and (max-width: 450px) {
     .BadgeType2:after {
         border-top: 11px solid transparent;
         border-bottom: 11px solid transparent;
-        border-right: 6px solid var(--badge_type_2_background);
     }
 }
 
