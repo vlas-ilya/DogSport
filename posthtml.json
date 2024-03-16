@@ -1,0 +1,40 @@
+{
+    "root": "./src/",
+    "input": "pages/*.html",
+    "output": "build",
+    "plugins": {
+        "posthtml-component": {
+            "root": "./src",
+            "folders": [
+                "components/accordion",
+                "components/address",
+                "components/badge",
+                "components/base",
+                "components/error-page",
+                "components/footer",
+                "components/footnote",
+                "components/head",
+                "components/header",
+                "components/layout",
+                "components/link",
+                "components/logo",
+                "components/map",
+                "components/menu",
+                "components/modal-window",
+                "components/modal-window-map",
+                "components/page",
+                "components/quote",
+                "components/seporator",
+                "components/text",
+                "components/time-line"
+            ]
+        },
+        "posthtml-beautify": {
+            "rules": {
+                "indent": 2,
+                "blankLines": false,
+                "sortAttr": false
+            }
+        }
+    }
+}

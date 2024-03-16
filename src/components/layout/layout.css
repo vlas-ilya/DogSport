@@ -1,0 +1,14 @@
+.Layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Layout_Content {
+    flex: 1 0 auto;
+}
+
+.Layout_Footer {
+    flex: 0 0 auto;
+    margin-top: 20px;
+}

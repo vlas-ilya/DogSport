@@ -1,0 +1,68 @@
+html {
+    --text-color: #5c5c5c;
+    --text-h4-background: #FFDE82;
+    --text-header-color: #fff;
+    --text-danger-color: #BE2F39;
+    --accent-color: #1D753A;
+    --border-color: #c0c9cc;
+    --link-color: #0074A7;
+    --accordion-background: #3f494c;
+    --footer-background: #EBECE0;
+    --transparent: #fff0;
+    --shadow: 5px 8px 10px -6px #c9c9c9;
+    --badge_type_1_background: #FFDE82;
+    --badge_type_1_background2: #917319;
+    --badge_type_2_background: #F6EDD9;
+    --badge_type_2_background2: #554e40;
+
+    --page-width: 800px;
+    --page-min-width: 320px;
+    --header-height: 200px;
+    --footer-height: 100px;
+
+    --page-margin: 20px 0;
+    --h1-font-size: 36px;
+    --h1-margin: 20px 0px 20px 0px;
+    --h3-font-size: 16px;
+    --h3-line-height: 20px;
+    --h4-font-size: 18px;
+    --h4-margin: 18px 0 15px 0;
+    --p-font-size: 16px;
+    --p-line-height: 22px;
+    --p-margin: 15px 0;
+    --ul-padding-inline-start: 35px;
+    --li-margin: 10px 0;
+    --li-font-size: 16px;
+    --li-line-height: 20px;
+    --Header_Header-font-size: 36px;
+    --Header_Header-margin: 5px;
+    --Quote_Author-font-size: 20px;
+    --Quote_Author-line-height: 25px;
+    --Quote_Author-margin-top: 10px;
+    --Quote_Author-margin-bottom: 20px;
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        --page-margin: 18px 0;
+        --h1-font-size: 32px;
+        --h1-margin: 18px 0px 18px 0px;
+        --h3-font-size: 14px;
+        --h3-line-height: 18px;
+        --h4-font-size: 16px;
+        --h4-margin: 16px 0 13px 0;
+        --p-font-size: 14px;
+        --p-line-height: 20px;
+        --p-margin: 13px 0;
+        --ul-padding-inline-start: 30px;
+        --li-margin: 8px 0;
+        --li-font-size: 14px;
+        --li-line-height: 18px;
+        --Header_Header-font-size: 32px;
+        --Header_Header-margin: 3px;
+        --Quote_Author-font-size: 18px;
+        --Quote_Author-line-height: 23px;
+        --Quote_Author-margin-top: 8px;
+        --Quote_Author-margin-bottom: 16px;
+    }
+}

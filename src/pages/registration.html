@@ -2,43 +2,21 @@
 <html lang="ru">
 
 <head>
-    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="Соревнования по обидиенс, Соревнования по обидиенс 2024, Соревнования по обидиенс во Владимире, 2024, Владимир, Мероприятие, Июль, Лыбедь, Собаки">
-    <meta name="description"
-        content="Состязания по обидиенс состоятся в городе Петушки Владимирской области с 12 по 14 июля, на стадионе Динамо">
-    <link rel="icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="logo192.png" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="./css/index.css" type="text/css">
-    <link rel="preload" as="image" href="./img/texture3.png">
-    <title>Obedience Open 2024 | Регистрация</title>
+    <x-head name="Регистрация">
+        <fill:preload>
+            <link rel="preload" as="image" href="./img/texture3.png">
+        </fill:preload>
+    </x-head>
 </head>
 
 <body class="Layout">
     <div class="Layout_Content">
-        <div class="Header">
-            <span class="Header_Header">Obedience Open</span>
-            <span class="Header_SubHeader">2024</span>
-        </div>
-        <div class="Page">
-            <div class="Page_Title">
-                <H1>Регистрация</H1>
-            </div>
-            <div class="Page_Menu">
-                <div class="Menu">
-                    <input type="checkbox" id="menu" class="Menu_Input" />
-                    <label for="menu" class="Menu_Label">Меню</label>
-                    <a href="./index.html" class="Menu_Item">Главная</a>
-                    <a href="./location.html" class="Menu_Item">Расположение</a>
-                    <a href="./accommodation.html" class="Menu_Item">Проживание</a>
-                    <a href="./rules.html" class="Menu_Item">Правила</a>
-                    <a href="./judges.html" class="Menu_Item">Судьи</a>
-                    <a href="#" class="Menu_Item Menu_Item_active">Регистрация</a>
-                </div>
-            </div>
-            <div class="Page_Content">
+        <x-header></x-header>
+        <x-page title="Регистрация">
+            <fill:menu>
+                <x-menu menu="registration"></x-menu>
+            </fill:menu>
+            <fill:body>
                 <h4><span>Регистрация</span></h4>
                 <p>
                     На данный момент ведётся предварительный сбор заявок в группе VK <a class="Link" target="_blank"
@@ -110,11 +88,10 @@
                     <li>Главное награждение финала + возможность получить титул CACOb победителю каждого дня</li>
                 </ul>
                 </p>
-            </div>
-        </div>
+            </fill:body>
+        </x-page>
     </div>
-    <div class="Footer Layout_Footer">
-    </div>
+    
 </body>
 
 </html>

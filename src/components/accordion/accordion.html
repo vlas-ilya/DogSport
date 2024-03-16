@@ -1,0 +1,20 @@
+<div class="Accordion">
+    <input type="checkbox" id="{{ key }}" class="Accordion_Input" checked="checked"></input>
+    <label class="Accordion_Section" for="{{ key }}">
+        <slot:title></slot:title>
+    </label>
+    <div class="Accordion_Body">
+        <div class="Accordion_Content Quote">
+            <div class="Accordion_Photo">
+                <img src="{{ img }}" alt="Фотография {{ title }}">
+                <slot:badge></slot:badge>
+                
+            </div>
+            <img class="Quote_Icon" src="./img/quote.jpg" alt="Цитата иконка">
+            <div class="Quote_Content">
+                <slot:content></slot:content>
+            </div>
+            <div class="Quote_Author">{{ title }}</div>
+        </div>
+    </div>
+</div>

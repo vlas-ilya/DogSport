@@ -1,0 +1,82 @@
+{
+  "name": "dogsport33",
+  "version": "1.0.0",
+  "description": "Состязания по обидиенс состоятся в городе Петушки Владимирской области с 12 по 14 июля, на стадионе Динамо",
+  "main": "index.html",
+  "scripts": {
+    "clean": "rm -rf ./build && mkdir ./build",
+
+    "css:concat": "rm -rf ./build/css && mkdir -p ./build/css && css-combine ./src/components/imports.css > ./build/css/index.css",
+    "css:autoprefixer": "postcss -u autoprefixer -r build/css/index.css",
+
+    "build:css": "npm run css:concat && npm run css:autoprefixer",
+    "build:public": "cp ./src/public/* ./build",
+    "build:images": "imagemin src/img/**/* --out-dir=build/img",
+    "build:js": "rm -rf ./build/js && mkdir -p ./build/js && copyfiles --flat ./src/**/*.js ./build/js",
+    "build:html": "posthtml -c posthtml.json",
+    "build:dev": "npm run clean && npm run build:css && npm run build:public && npm run build:images && npm run build:html && npm run build:js",
+    "build:prod": "npm run clean && npm run build:css && npm run build:public && npm run build:images && npm run build:html && npm run build:js && npm run gzip && npm run hashes && npm run gzip:html",
+
+    "watch:css": "onchange \"src/**/*.css\" -- npm run build:css",
+    "watch:public": "onchange \"src/public\" -- npm run build:public",
+    "watch:images": "onchange \"src/**/*.{png,jpg,jpeg,svg,webp}\" -- npm run build:images",
+    "watch:js": "onchange \"src/**/*.js\" -- npm run build:js",
+    "watch:html": "onchange \"src/pages\" -- npm run build:html",
+    "watch": "npm-run-all --parallel watch:*",
+    
+    "gzip": "gzip -krf build/**/*.{css,js,png,jpg,jpeg,svg,webp}",
+    "gzip:html": "gzip -krf build/*.{html}",
+    
+    "hashes": "node add-hashes.js",
+    "serve": "browser-sync start --server \"build\" --files \"build\"",    
+    
+    "release": "rm -rf ./dist && mkdir ./dist && cp -r ./build/ ./dist",
+    "dev": "npm-run-all --parallel watch serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlas-ilya/DogSport.git"
+  },
+  "keywords": [
+    "Соревнования",
+    "по",
+    "обидиенс",
+    "Соревнования",
+    "по",
+    "обидиенс",
+    "2024",
+    "Соревнования",
+    "по",
+    "обидиенс",
+    "во",
+    "Владимире",
+    "2024",
+    "Владимир",
+    "Мероприятие",
+    "Июль",
+    "Лыбедь",
+    "Собаки"
+  ],
+  "author": "Власов Илья",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vlas-ilya/DogSport/issues"
+  },
+  "homepage": "https://github.com/vlas-ilya/DogSport#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.18",
+    "browser-sync": "^3.0.2",
+    "copyfiles": "^2.4.1",
+    "css-combine": "^1.0.0",
+    "gzip-cli": "^1.2.0",
+    "hashcat": "^0.4.1",
+    "imagemin-cli": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^11.0.0",
+    "posthtml": "^0.16.6",
+    "posthtml-beautify": "^0.7.0",
+    "posthtml-cli": "^0.10.0",
+    "posthtml-component": "^1.1.1"
+  }
+}

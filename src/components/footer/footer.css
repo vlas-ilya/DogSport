@@ -1,0 +1,22 @@
+.Footer {
+    height: var(--footer-height);
+}
+
+.Footer:after {
+    content: ' ';
+    position: absolute;
+    height: var(--footer-height);
+    width: 100%;
+    opacity: 0.1;
+    background: url(../img/texture3.png) bottom left repeat scroll;
+    min-width: var(--page-min-width);
+}
+
+.Footer:before {
+    content: ' ';
+    position: absolute;
+    height: var(--footer-height);
+    width: 100%;
+    background: var(--footer-background);
+    min-width: var(--page-min-width);
+}

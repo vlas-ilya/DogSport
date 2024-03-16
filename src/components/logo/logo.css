@@ -1,0 +1,10 @@
+.Logo {
+    display: flex;
+    justify-content: center;
+}
+
+.Logo_Image {
+    width: 100%;
+    max-width: 400px;
+    opacity: 0.9;
+}

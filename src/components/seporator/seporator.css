@@ -1,0 +1,27 @@
+.Seporator {
+    width: 70px;
+    height: 7px;
+    margin: 0 auto;
+    background: var(--accent-color);
+    border: none;
+    position: relative;
+    overflow: visible;
+}
+
+.Seporator::before, .Seporator::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 1px;
+    width: 55px;
+    border-bottom: 1px solid var(--accent-color);
+    top: 2px;
+}
+
+.Seporator::before {
+    left: -60px;
+}
+
+.Seporator::after {
+    right: -60px;
+}

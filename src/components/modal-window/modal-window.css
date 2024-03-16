@@ -1,0 +1,52 @@
+.ModalWindow {
+    position: fixed;
+    background-color: rgb(0 0 0 / 50%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ModalWindow:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ModalWindow_Container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: 100%;
+}
+
+.ModalWindow_Body {
+    background: white;
+    padding: 40px 10px 10px 10px;
+}
+
+.ModalWindow_Сlose {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 14px;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    top: 0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ModalWindow_Сlose:hover {
+    color: rgb(75, 75, 75);
+}

@@ -1,0 +1,45 @@
+<script props>
+
+    module.exports = {
+        path: props.menu || '',
+        items: [
+        {
+                url: "./index.html",
+                name: "Главная",
+            },
+            {
+                url: "./location.html",
+                name: "Расположение",
+            },
+            {
+                url: "./accommodation.html",
+                name: "Проживание",
+            },
+            {
+                url: "./rules.html",
+                name: "Правила",
+            },
+            {
+                url: "./judges.html",
+                name: "Судьи",
+            },
+            {
+                url: "./registration.html",
+                name: "Регистрация",
+            },
+        ].map(item => ({
+            url: item.url == `./${props.menu}.html` ? "#" : item.url,
+            name: item.name,
+            class: item.url == `./${props.menu}.html` ? "Menu_Item Menu_Item_active" : "Menu_Item",
+
+        }))
+    }
+</script>
+
+<div class="Menu">
+    <input type="checkbox" id="menu" class="Menu_Input" />
+    <label for="menu" class="Menu_Label">Меню</label>
+    <each loop="item in items">
+        <a href="{{ item.url }}" class="{{ item.class }}">{{ item.name }}</a>
+    </each>
+</div>

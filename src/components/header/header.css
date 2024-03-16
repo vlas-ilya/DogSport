@@ -1,0 +1,66 @@
+.Header {
+    height: var(--header-height);
+    background: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.Header:after {
+    content: ' ';
+    position: absolute;
+    height: var(--header-height);
+    width: 100%;
+    opacity: 0.15;
+    background: url(../img/texture3.png) bottom left repeat scroll;
+    min-width: var(--page-min-width);
+}
+
+.Header:before {
+    content: ' ';
+    position: absolute;
+    height: var(--header-height);
+    width: 100%;
+    background: var(--accent-color);
+    min-width: var(--page-min-width);
+}
+
+.Header_Header,
+.Header_SubHeader {
+    display: block;
+    width: var(--page-width);
+    color: var(--text-header-color);
+    text-transform: uppercase;
+    font-size: var(--Header_Header-font-size);
+    z-index: 1;
+}
+
+.Header_Header {
+    font-weight: 100;
+    margin-bottom: var(--Header_Header-margin);
+}
+
+.Header_SubHeader {
+    font-weight: 600;
+    margin-top: var(--Header_Header-margin);
+}
+
+@media screen and (max-width: 850px) {
+    .Header {}
+
+    .Header_Header,
+    .Header_SubHeader {
+        width: 100%;
+        padding: 0 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .Header_Header,
+    .Header_SubHeader {
+        padding: 0 15px;
+    }
+}

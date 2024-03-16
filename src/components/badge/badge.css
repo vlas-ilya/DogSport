@@ -1,0 +1,121 @@
+.BadgeType1 {
+    display: block;
+    width: calc(100% + 8px);
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: -4px;
+    margin-right: -4px;
+    background: var(--badge_type_1_background);
+    font-weight: 200;
+    font-size: 15px;
+    position: absolute;
+    bottom: 20px;
+    box-shadow: 2px 2px 4px 0px rgba(34, 60, 80, 0.2);
+    z-index: 1;
+}
+
+@media screen and (max-width: 650px) {
+    .BadgeType1 {
+        bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .BadgeType1 {
+        bottom: 10px;
+        height: 23px;
+        line-height: 23px;
+        font-size: 12px;
+    }
+}
+
+.BadgeType1:before,
+.BadgeType1:after {
+    content: "";
+    position: absolute;
+}
+
+.BadgeType1:before {
+    height: 0;
+    width: 0;
+    bottom: -4px;
+    left: 0;
+    border-top: 4px solid var(--badge_type_1_background2);
+    border-left: 4px solid transparent;
+}
+
+.BadgeType1:after {
+    height: 0;
+    width: 0;
+    right: 0;
+    bottom: -4px;
+    border-top: 4px solid var(--badge_type_1_background2);
+    border-right: 4px solid transparent;
+}
+
+.BadgeType2 {
+    padding-right: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+    position: absolute;
+    right: -4px;
+    bottom: 60px;
+    background: var(--badge_type_2_background);
+    font-weight: 200;
+    font-size: 15px;
+    box-shadow: 2px 2px 4px 0px rgba(34, 60, 80, 0.2);
+    z-index: 1;
+}
+
+@media screen and (max-width: 650px) {
+    .BadgeType2 {
+        padding-left: 5px;
+        padding-right: 5px;
+        bottom: 55px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .BadgeType2 {
+        padding-left: 5px;
+        padding-right: 5px;
+        bottom: 40px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 10px;
+    }
+}
+
+.BadgeType2:before,
+.BadgeType2:after {
+    content: "";
+    position: absolute;
+}
+
+.BadgeType2:before {
+    height: 0;
+    width: 0;
+    bottom: -4px;
+    right: 0px;
+    border-top: 4px solid var(--badge_type_2_background2);
+    border-right: 4px solid transparent;
+}
+
+.BadgeType2:after {
+    height: 0;
+    width: 0;
+    left: -8px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 8px solid var(--badge_type_2_background);
+}
+
+@media screen and (max-width: 450px) {
+    .BadgeType2:after {
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+    }
+}

@@ -1,0 +1,12 @@
+.Text {}
+
+.Text_danger {
+    color: var(--text-danger-color);
+    font-weight: 800;
+}
+
+.Text_underline {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+}

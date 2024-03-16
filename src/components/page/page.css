@@ -1,0 +1,35 @@
+.Page {
+    max-width: var(--page-width);
+    margin: 20px auto;
+}
+
+.Page_Title {}
+
+.Page_Menu {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.Page_SubTitle {
+    text-align: center;
+}
+
+.Page_Content {
+    text-align: justify;
+}
+
+@media screen and (max-width: 850px) {
+    .Page {
+        width: 100%;
+        max-width: none;
+        margin: var(--page-margin);
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Page {
+        padding: 0 15px;
+    }
+}

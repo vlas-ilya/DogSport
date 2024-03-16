@@ -1,0 +1,84 @@
+.Address {
+    margin: 10px;
+    clear: both;
+    position: relative;
+    padding-top: 10px;
+}
+
+.Address::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.Address:first-child {
+    padding-top: 0;
+}
+
+.Address_Name {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.Address_Address {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 200;
+    text-align: left;
+    line-height: 22px;
+}
+
+.Address_Address>a {
+    font-size: 14px;
+}
+
+.Address_Address>svg {
+    margin-right: 5px;
+    margin-bottom: -2px;
+}
+
+.Address_Info {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: right;
+}
+
+.Address_Info:first-child {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 550px) {
+    .Address_Name {
+        font-weight: 300;
+        font-size: 22px;
+    }
+
+    .Address_Address {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .Address_Info {
+        font-weight: 300;
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .Address_Name {
+        font-size: 20px;
+    }
+
+    .Address_Address {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .Address_Info {
+        font-size: 13px;
+    }
+}

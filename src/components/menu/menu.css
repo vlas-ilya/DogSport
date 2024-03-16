@@ -1,0 +1,109 @@
+.Menu {
+    min-height: 43px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border: 1px solid var(--border-color);
+    border-width: 1px 0px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.Menu_Item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    position: relative;
+    color: var(--text-color);
+    min-height: 43px;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.Menu_Item:nth-child(3) {
+    padding-left: 0px;
+}
+
+.Menu_Item:nth-child(3):after {
+    left: 0;
+}
+
+.Menu_Item:last-child {
+    padding-right: 0px;
+}
+
+.Menu_Item:last-child:after {
+    left: 0;
+}
+
+.Menu_Item:hover:after {
+    content: ' ';
+    width: 100%;
+    border-bottom: 5px solid var(--border-color);
+    position: absolute;
+    bottom: -2.5px;
+}
+
+.Menu_Item_active:after,
+.Menu_Item_active:hover:after {
+    content: ' ';
+    width: 100%;
+    border-bottom: 5px solid var(--accent-color);
+    position: absolute;
+    bottom: -2.5px;
+}
+
+.Menu_Input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.Menu_Label {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .Menu {
+        display: block;
+    }
+
+    .Menu_Item {
+        display: none;
+        padding: 0;
+    }
+
+    .Menu_Label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        position: relative;
+        color: var(--text-color);
+        min-height: 43px;
+        text-decoration: none;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+    }
+
+    input.Menu_Input:checked~.Menu_Item {
+        display: flex;
+    }
+
+    input.Menu_Input:checked~.Menu_Item_active {
+        font-weight: 800;
+        color: var(--accent-color);
+    }
+
+    input.Menu_Input:checked~.Menu_Item:after {
+        display: none;
+    }
+}

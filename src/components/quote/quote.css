@@ -1,0 +1,32 @@
+.Quote {}
+
+.Quote_Icon {
+    width: 100%;
+    max-width: 50px;
+    float: left;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 650px) {
+    .Quote_Icon {
+        max-width: 45px;
+    }
+}
+
+.Quote_Content>p:first-child {
+    margin-top: 0
+}
+
+.Quote_Content>p {
+    margin: 10px 0;
+}
+
+.Quote_Author {
+    font-size: var(--Quote_Author-font-size);
+    font-weight: 200;
+    line-height: var(--Quote_Author-line-height);
+    float: right;
+    margin-top: var(--Quote_Author-margin-top);
+    margin-bottom: var(--Quote_Author-margin-bottom);
+}

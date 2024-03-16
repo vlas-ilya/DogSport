@@ -1,0 +1,36 @@
+<div class="Address">
+    <div class="Accordion_Photo">
+        <img src="{{ img }}" alt="Фотография {{ name }}">
+    </div>
+    <div class="Address_Name">{{ name }}</div>
+    <div class="Address_Address">
+        <svg width="16" height="16" fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+            focusable="false">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.05453 12.2611C3.43493 10.9487 1.6 9.46183 1.6 6.39961C1.6 2.86383 4.4652 0 7.99961 0C11.534 0 14.3992 2.8652 14.3992 6.39961C14.3992 9.46755 12.5653 10.9562 10.9456 12.2709C9.74981 13.2416 8.67081 14.1175 8.53291 15.4641L8.52695 15.5223C8.49922 15.7931 8.27111 15.999 7.99888 15.999C7.72576 15.999 7.49742 15.7914 7.47158 15.5195L7.46631 15.4641C7.33815 14.1115 6.25555 13.2343 5.05453 12.2611ZM8.00065 8.66614C9.10515 8.66614 10.0005 7.77076 10.0005 6.66626C10.0005 5.56176 9.10515 4.66638 8.00065 4.66638C6.89615 4.66638 6.00077 5.56176 6.00077 6.66626C6.00077 7.77076 6.89615 8.66614 8.00065 8.66614Z"
+                fill="currentColor"></path>
+        </svg>
+        {{ address }}
+        <a class="Link openMap" href="#open-visit-modal-{{ key }}">показать на карте</a>
+        <div id="open-visit-modal-{{ key }}" class="ModalWindow"
+            data-link="{{ url }}">
+            <div class="ModalWindow_Container">
+                <div class="ModalWindow_Body">
+                    <a href="#" title="Закрыть" class="ModalWindow_Сlose">Закрыть</a>
+                    <div class="Map">
+                        <div style="position:relative;overflow:hidden;">
+                            <iframe src="" width="800" height="400" frameborder="1"
+                                allowfullscreen="true" style="position:relative;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <slot:info></slot:info>
+    </div>
+    <div class="clear">
+        <slot:additionalInfo></slot:additionalInfo>
+    </div>
+</div>

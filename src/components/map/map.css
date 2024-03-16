@@ -1,0 +1,11 @@
+.Map {
+    box-shadow: var(--shadow);
+}
+
+.Map>div {
+    display: flex;
+}
+
+.Map>div>iframe {
+    margin: 0 auto
+}
