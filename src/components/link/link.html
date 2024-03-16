@@ -1,0 +1,16 @@
+<script props>
+    module.exports = {
+        href: props.href
+    }
+</script>
+
+<if condition="href.startsWith('https://') || href.startsWith('http://')">
+    <a class="Link" target="_blank" rel="nofollow noopener" href="{{ href }}">
+        <yield></yield>
+    </a>
+</if>
+<else>
+    <a class="Link" href="{{ href }}">
+        <yield></yield>
+    </a>
+</if>

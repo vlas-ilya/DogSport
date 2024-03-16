@@ -2,11 +2,8 @@
 <html lang="ru">
 
 <head>
-    <x-head name="Проживание">
-        <fill:preload>
-            <link rel="preload" as="image" href="./img/texture3.png">
-        </fill:preload>
-    </x-head>
+    <x-head name="Проживание"></x-head>
+    <link rel="preload" as="image" href="./img/texture3.png">
 </head>
 
 <body class="Layout">
@@ -33,8 +30,8 @@
                         <div class="Address_Info">30 минут езды до стадиона</div>
                         <div class="Address_Info">Доплата 1000 рублей в сутки</div>
                         <div class="Address_Info">Пускают маленьких и средних собак</div>
-                        <div class="Address_Info"><a class="Link" target="_blank" rel="nofollow noopener"
-                                href="https://motelpokrov.ru/">https://motelpokrov.ru/ </a></div>
+                        <div class="Address_Info"><x-link
+                                href="https://motelpokrov.ru/">https://motelpokrov.ru/</x-link></div>
                     </fill:info>
                     <fill:additionalInfo>
                         <p>
@@ -60,7 +57,7 @@
                         <div class="Address_Info">Часто останавливаются гости с собаками </div>
                         <div class="Address_Info">500 рублей в сутки за сутки за собаку</div>
                         <div class="Address_Info">Стоимость номеров от 3 000</div>
-                        <div class="Address_Info"><a class="Link" href="tel: +79302255000"></a></div>
+                        <div class="Address_Info"><x-link href="tel: +79302255000">+7 (930) 225-50-00</a></div>
                     </fill:info>
                 </x-address>
                 <hr class="Seporator">
@@ -70,9 +67,9 @@
                     <fill:info>
                         <div class="Address_Info">Ограничений по собакам и доплат нет</div>
                         <div class="Address_Info">Обязательно согласовать собаку и породу</div>
-                        <div class="Address_Info"><a class="Link" href="tel: +74952151665">+7 (495) 215-16-65</a></div>
-                        <div class="Address_Info"><a class="Link" target="_blank" rel="nofollow noopener"
-                                href="https://www.kornilovdom.ru/">https://www.kornilovdom.ru/</a></div>
+                        <div class="Address_Info"><x-link href="tel: +74952151665">+7 (495) 215-16-65</x-link></div>
+                        <div class="Address_Info"><x-link
+                                href="https://www.kornilovdom.ru/">https://www.kornilovdom.ru/</x-link></div>
                     </fill:info>
                 </x-address>
             </fill:body>

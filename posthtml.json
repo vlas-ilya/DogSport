@@ -35,6 +35,9 @@
                 "blankLines": false,
                 "sortAttr": false
             }
+        },
+        "posthtml-expressions": {
+            
         }
     }
 }
