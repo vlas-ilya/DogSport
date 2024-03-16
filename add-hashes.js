@@ -47,36 +47,31 @@ const calcNewFileName = (formats, fileName) => {
     return fileName.replace(`.${format}`, `-${hash}.${format}`)
 }
 
-const makeReplace = (formats, fileName) => {
+const move = (formats, fileName) => {
     const newFileName = calcNewFileName(formats, fileName);
     fs.renameSync(fileName, newFileName);
 
     const from = fileName.replace("./build/", "./");
     const to = newFileName.replace("./build/", "./");
-
-    return (source) => source.replaceAll(from, to);
+    return [from, to];
 }
 
-const replaceContent = (fileName, replace) => {
+const replaceContent = (fileName, replaceFun) => {
     const content = fs.readFileSync(fileName).toString();
-    const newContent = replace(content);
+    const newContent = replaceFun(content);
     fs.writeFileSync(fileName, newContent);
 }
 
 const addHashes = () => {
-    const cssReplaces = readCssFiles().map(fileName => makeReplace(formats.css, fileName));
-    const jsReplaces = readJsFiles().map(fileName => makeReplace(formats.js, fileName));
-    const imgReplaces = readImgFiles().map(fileName => makeReplace(formats.img, fileName));
+    const movements = [
+        ...readCssFiles().map(fileName => move(formats.css, fileName)),
+        ...readJsFiles().map(fileName => move(formats.js, fileName)),
+        ...readImgFiles().map(fileName => move(formats.img, fileName)),
+    ];
 
-    readHtmlFiles().forEach(fileName => {
-        replaceContent(fileName, (content) => {
-            var newContent = content;
-            cssReplaces.forEach(replace => newContent = replace(newContent));
-            jsReplaces.forEach(replace => newContent = replace(newContent));
-            imgReplaces.forEach(replace => newContent = replace(newContent));
-            return newContent;
-        })
-    });
+    const replaceFun = content => movements.reduce((result, [from, to]) => result.replaceAll(from, to), content)
+
+    readHtmlFiles().forEach(fileName => replaceContent(fileName, replaceFun));
 
 }
 
