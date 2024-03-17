@@ -2,7 +2,7 @@ name: Build releasse env
 
 on:
   push:
-    brabches: 
+    branches: 
       - main
 
 jobs:
@@ -32,7 +32,7 @@ jobs:
       - name: CompressFiles
         uses: stefh/ghaction-CompressFiles@v2
         with:
-          path: ./build/
+          path: ./dist/
           extensions: '.html,.css,.js,.png,.jpg,.jpeg,.svg,.webp'
           tools: 'brotli,gzip'
 
