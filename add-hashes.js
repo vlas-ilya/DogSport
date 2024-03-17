@@ -78,7 +78,7 @@ const addHashes = () => {
         ...readHtmlFiles()
     ]
 
-    files.forEach(fileName => replaceContent(fileName, replaceFun));
+    readHtmlFiles().forEach(fileName => replaceContent(fileName, replaceFun));
 }
 
 addHashes()
