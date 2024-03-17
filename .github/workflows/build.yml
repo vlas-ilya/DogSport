@@ -2,7 +2,8 @@ name: Build test env
 
 on:
   push:
-    brabches: [develop]
+    brabches: 
+      - develop
 
 jobs:
   build:
