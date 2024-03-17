@@ -8,19 +8,14 @@ const imgFolder = "./build/img/";
 
 const formats = {
     html: ["html"],
-    css: ["css", "css.gz"],
-    js: ["js", "js.gz"],
+    css: ["css"],
+    js: ["js"],
     img: [
         "png",
-        "png.gz",
         "svg",
-        "svg.gz",
         "jpg",
-        "jpg.gz",
         "webp",
-        "webp.gz",
         "jpeg",
-        "jpeg.gz",
     ]
 }
 
