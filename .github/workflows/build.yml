@@ -32,6 +32,7 @@ jobs:
           eval `ssh-agent -s`
           mkdir -p ~/.ssh
           echo $SSH_DEPLOY_KEY > ~/.ssh/id_rsa_server
+          chmod 400 ~/.ssh/id_rsa_server
           cd ~/.ssh
           ssh-add -D && ssh-add ./id_rsa_server
           cd -
