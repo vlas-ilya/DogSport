@@ -23,7 +23,7 @@
     "gzip": "gzip -krf build/**/*.{html,css,js,png,jpg,jpeg,svg,webp}",
     "hashes": "node add-hashes.js",
     "serve": "browser-sync start --server \"build\" --files \"build\"",
-    "release": "rm -rf ./dist && mkdir ./dist && cp -r ./build/ ./dist",
+    "release": "rm -rf ./dist && mkdir ./dist && cp -r ./build/* ./dist",
     "dev": "npm-run-all --parallel watch serve"
   },
   "repository": {
