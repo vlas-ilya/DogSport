@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <x-head name="404"></x-head>
-    <link rel="preload" as="image" href="./img/texture3.png">
-</head>
-
-<body class="Layout">
-    <div class="Layout_Content">
-        <x-header></x-header>
-        <x-page title="404">
-            <fill:menu>
-                <x-menu></x-menu>
-            </fill:menu>
-            <fill:body>
-                <div class="ErrorPage">
-                    <img src="./img/404.png" class="ErrorPage_Image" alt="404" />
-                    <div class="ErrorPage_Title">Страница не найдена</div>
-                </div>
-            </fill:body>
-        </x-page>
-    </div>
-    <x-footer></x-footer>
-</body>
-
-</html>
+<x-layout name="404">
+    <fill:preload>
+        <link rel="preload" as="image" href="./img/texture3.png">
+    </fill:preload>
+    <fill:layoutBody>
+        <div class="ErrorPage">
+            <img src="./img/404.png" class="ErrorPage_Image" alt="404" />
+            <div class="ErrorPage_Title">Страница не найдена</div>
+        </div>
+    </fill:layoutBody>
+</x-layout>
