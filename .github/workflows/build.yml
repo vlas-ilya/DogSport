@@ -29,6 +29,13 @@ jobs:
           npm run build:prod
           ls -al ./build/css/
 
+      - name: CompressFiles
+        uses: stefh/ghaction-CompressFiles@v2
+        with:
+          path: ./build/
+          extensions: '.html,.css,.js,.png,.jpg,.jpeg,.svg,.webp'
+          tools: 'brotli,gzip'
+
       - name: Publish
         uses: appleboy/scp-action@v0.1.7
         with:
