@@ -1,82 +1,62 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <x-head name="Проживание"></x-head>
-    <link rel="preload" as="image" href="./img/texture3.png">
-</head>
-
-<body class="Layout">
-    <div class="Layout_Content">
-        <x-header></x-header>
-        <x-page title="Проживание">
-            <fill:menu>
-                <x-menu menu="accommodation"></x-menu>
-            </fill:menu>
-            <fill:body>
-                <x-address key="1" img="./img/visit.webp" name="Гостиница «Визит»"
-                    url="https://yandex.ru/map-widget/v1/org/vizit/1088943983/?ll=39.456217%2C55.930612&no-distribution=1&utm_source=share&z=15"
-                    address="Владимирская область, Петушки, улица Маяковского, 19">
-                    <fill:info>
-                        <div class="Address_Info">3 километра от стадиона</div>
-                        <div class="Address_Info">С собаками пускают, доплат не берут</div>
-                    </fill:info>
-                </x-address>
-                <hr class="Seporator">
-                <x-address key="2" img="./img/motelpokrov.png" name="ГК «Покровский медведь»"
-                    url="https://yandex.ru/map-widget/v1/?ll=39.157017%2C55.914609&mode=poi&no-distribution=1&poi%5Bpoint%5D=39.154226%2C55.913406&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D39279969313&utm_source=share&z=16.82"
-                    address="Владимирская область, Покров, ул. Ленина, 181">
-                    <fill:info>
-                        <div class="Address_Info">30 минут езды до стадиона</div>
-                        <div class="Address_Info">Доплата 1000 рублей в сутки</div>
-                        <div class="Address_Info">Пускают маленьких и средних собак</div>
-                        <div class="Address_Info"><x-link
-                                href="https://motelpokrov.ru/">https://motelpokrov.ru/</x-link></div>
-                    </fill:info>
-                    <fill:additionalInfo>
-                        <p>
-                        <h4><span>Требования к посетителям</span></h4>
-                        <ul>
-                            <li>Паспорт с отметкой о прививках</li>
-                            <li>Не более двух животных на номер</li>
-                            <li>Убирать на территории гостиницы</li>
-                            <li>Поводки и намордники на территории гостиницы</li>
-                            <li>Выгул на территории строго запрещен</li>
-                            <li>Кормление только из своих мисок</li>
-                            <li>Не пользоваться полотенцами отеля для собак</li>
-                            <li>Посещение ресторанов и прочих общественных мест с собаками запрещено</li>
-                        </ul>
-                        </p>
-                    </fill:additionalInfo>
-                </x-address>
-                <hr class="Seporator">
-                <x-address key="3" img="./img/podvorie.jpeg" name="Гостиничный комплекс «Подворье»"
-                    url="https://yandex.ru/map-widget/v1/?ll=39.151603%2C55.914369&mode=poi&no-distribution=1&poi%5Bpoint%5D=39.150739%2C55.914778&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1371930951&utm_source=share&z=19.09"
-                    address="Владимирская область, Покров, ул. Ленина, 210, стр. 2">
-                    <fill:info>
-                        <div class="Address_Info">Часто останавливаются гости с собаками </div>
-                        <div class="Address_Info">500 рублей в сутки за сутки за собаку</div>
-                        <div class="Address_Info">Стоимость номеров от 3 000</div>
-                        <div class="Address_Info"><x-link href="tel: +79302255000">+7 (930) 225-50-00</a></div>
-                    </fill:info>
-                </x-address>
-                <hr class="Seporator">
-                <x-address key="4" img="./img/karnilov.jpeg" name="Отель «Корнилов»"
-                    url="https://yandex.ru/map-widget/v1/org/pokrov_kornilov/171023518407/?ll=39.182087%2C55.918666&z=17"
-                    address="Владимирская область, Покров, ул. Ленина, 94">
-                    <fill:info>
-                        <div class="Address_Info">Ограничений по собакам и доплат нет</div>
-                        <div class="Address_Info">Обязательно согласовать собаку и породу</div>
-                        <div class="Address_Info"><x-link href="tel: +74952151665">+7 (495) 215-16-65</x-link></div>
-                        <div class="Address_Info"><x-link
-                                href="https://www.kornilovdom.ru/">https://www.kornilovdom.ru/</x-link></div>
-                    </fill:info>
-                </x-address>
-            </fill:body>
-        </x-page>
-    </div>
-    <x-footer></x-footer>
-    <script src="./js/address.js"></script>
-</body>
-
-</html>
+<x-layout name="Проживание">
+    <fill:layoutBody>
+        <x-address key="1" img="./img/visit.webp" name="Гостиница «Визит»"
+            url="https://yandex.ru/map-widget/v1/org/vizit/1088943983/?ll=39.456217%2C55.930612&no-distribution=1&utm_source=share&z=15"
+            address="Владимирская область, Петушки, улица Маяковского, 19">
+            <fill:info>
+                <div class="Address_Info">3 километра от стадиона</div>
+                <div class="Address_Info">С собаками пускают, доплат не берут</div>
+            </fill:info>
+        </x-address>
+        <hr class="Seporator">
+        <x-address key="2" img="./img/motelpokrov.png" name="ГК «Покровский медведь»"
+            url="https://yandex.ru/map-widget/v1/?ll=39.157017%2C55.914609&mode=poi&no-distribution=1&poi%5Bpoint%5D=39.154226%2C55.913406&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D39279969313&utm_source=share&z=16.82"
+            address="Владимирская область, Покров, ул. Ленина, 181">
+            <fill:info>
+                <div class="Address_Info">30 минут езды до стадиона</div>
+                <div class="Address_Info">Доплата 1000 рублей в сутки</div>
+                <div class="Address_Info">Пускают маленьких и средних собак</div>
+                <div class="Address_Info"><x-link href="https://motelpokrov.ru/">https://motelpokrov.ru/</x-link></div>
+            </fill:info>
+            <fill:additionalInfo>
+                <p>
+                <h4><span>Требования к посетителям</span></h4>
+                <ul>
+                    <li>Паспорт с отметкой о прививках</li>
+                    <li>Не более двух животных на номер</li>
+                    <li>Убирать на территории гостиницы</li>
+                    <li>Поводки и намордники на территории гостиницы</li>
+                    <li>Выгул на территории строго запрещен</li>
+                    <li>Кормление только из своих мисок</li>
+                    <li>Не пользоваться полотенцами отеля для собак</li>
+                    <li>Посещение ресторанов и прочих общественных мест с собаками запрещено</li>
+                </ul>
+                </p>
+            </fill:additionalInfo>
+        </x-address>
+        <hr class="Seporator">
+        <x-address key="3" img="./img/podvorie.jpeg" name="Гостиничный комплекс «Подворье»"
+            url="https://yandex.ru/map-widget/v1/?ll=39.151603%2C55.914369&mode=poi&no-distribution=1&poi%5Bpoint%5D=39.150739%2C55.914778&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1371930951&utm_source=share&z=19.09"
+            address="Владимирская область, Покров, ул. Ленина, 210, стр. 2">
+            <fill:info>
+                <div class="Address_Info">Часто останавливаются гости с собаками </div>
+                <div class="Address_Info">500 рублей в сутки за сутки за собаку</div>
+                <div class="Address_Info">Стоимость номеров от 3 000</div>
+                <div class="Address_Info"><x-link href="tel: +79302255000">+7 (930) 225-50-00</a></div>
+            </fill:info>
+        </x-address>
+        <hr class="Seporator">
+        <x-address key="4" img="./img/karnilov.jpeg" name="Отель «Корнилов»"
+            url="https://yandex.ru/map-widget/v1/org/pokrov_kornilov/171023518407/?ll=39.182087%2C55.918666&z=17"
+            address="Владимирская область, Покров, ул. Ленина, 94">
+            <fill:info>
+                <div class="Address_Info">Ограничений по собакам и доплат нет</div>
+                <div class="Address_Info">Обязательно согласовать собаку и породу</div>
+                <div class="Address_Info"><x-link href="tel: +74952151665">+7 (495) 215-16-65</x-link></div>
+                <div class="Address_Info"><x-link
+                        href="https://www.kornilovdom.ru/">https://www.kornilovdom.ru/</x-link></div>
+            </fill:info>
+        </x-address>
+        <script src="./js/address.js"></script>
+    </fill:layoutBody>
+</x-layout>
