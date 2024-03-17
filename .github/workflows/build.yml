@@ -27,7 +27,6 @@ jobs:
       - name: Build app
         run: |
           npm run build:prod
-          gzip -krf ./build/**/*.{html,css,js,png,jpg,jpeg,svg,webp}
           ls -al ./build/css/
 
       - name: Publish
