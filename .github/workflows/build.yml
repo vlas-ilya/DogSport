@@ -34,7 +34,7 @@ jobs:
 
       - name: Publish  
         run: |
-            scp ./build/ $SERVER:${APP_PATH}/test/
-          env:
-            SERVER: ${{secrets.SERVER}}
-            APP_PATH: ${{secrets.APP_PATH}}
+          scp ./build/ $SERVER:$APP_PATH/test/
+        env:
+          SERVER: ${{secrets.SERVER}}
+          APP_PATH: ${{secrets.APP_PATH}}
