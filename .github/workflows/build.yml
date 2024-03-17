@@ -35,4 +35,4 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.KEY }}
           source: ./build
-          target: ${{ APP_PATH }}
+          target: ${{ secrets.APP_PATH }}
