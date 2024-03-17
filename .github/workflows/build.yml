@@ -27,14 +27,12 @@ jobs:
         run: |
           npm run build:prod
 
-      - name: Init SSH
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{secrets.SSH_DEPLOY_KEY}}
-
       - name: Publish  
-        run: |
-          scp ./build/ $SERVER:$APP_PATH/test/
-        env:
-          SERVER: ${{secrets.SERVER}}
-          APP_PATH: ${{secrets.APP_PATH}}
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.KEY }}
+          source: ./build
+          target: ${{ APP_PATH }}
