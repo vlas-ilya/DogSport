@@ -66,7 +66,7 @@ const addHashes = () => {
     const movements = [
         ...readCssFiles().map(fileName => move(formats.css, fileName)),
         ...readJsFiles().map(fileName => move(formats.js, fileName)),
-        ...readImgFiles().map(fileName => move(formats.img, fileName)),
+        ...readHtmlFiles().map(fileName => move(formats.img, fileName)),
     ];
 
     const replaceFun = content => movements.reduce((result, [from, to]) => result.replaceAll(from, to), content)
@@ -74,11 +74,10 @@ const addHashes = () => {
     const files = [
         ...readCssFiles(),
         ...readJsFiles(),
-        ...readImgFiles(),
-        ...readHtmlFiles()
+        ...readHtmlFiles(),
     ]
 
-    readHtmlFiles().forEach(fileName => replaceContent(fileName, replaceFun));
+    files.forEach(fileName => replaceContent(fileName, replaceFun));
 }
 
 addHashes()
