@@ -22,7 +22,7 @@ jobs:
       - name: Instal dependencies
         run: |
           npm i -D
-          apt-get install gzip
+          sudo apt-get install gzip
 
       - name: Build app
         run: |
