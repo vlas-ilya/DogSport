@@ -71,8 +71,14 @@ const addHashes = () => {
 
     const replaceFun = content => movements.reduce((result, [from, to]) => result.replaceAll(from, to), content)
 
-    readHtmlFiles().forEach(fileName => replaceContent(fileName, replaceFun));
+    const files = [
+        ...readCssFiles(),
+        ...readJsFiles(),
+        ...readImgFiles(),
+        ...readHtmlFiles()
+    ]
 
+    files.forEach(fileName => replaceContent(fileName, replaceFun));
 }
 
 addHashes()
