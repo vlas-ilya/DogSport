@@ -1,0 +1,28 @@
+name: Build test env
+
+on:
+  push:
+    brabches: [develop]
+
+jobs:
+  build:
+    run-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Instal dependencies
+        run: |
+          npm i -D
+
+      - name: Build app
+        run: |
+          npm run build:prod
