@@ -27,17 +27,14 @@ jobs:
         run: |
           npm run build:prod
 
-      - name: Init ssh
-        run: |
-          eval `ssh-agent -s`
-          mkdir -p ~/.ssh
-          echo $SSH_DEPLOY_KEY > ~/.ssh/id_rsa_server
-          chmod 400 ~/.ssh/id_rsa_server
-          cd ~/.ssh
-          ssh-add -D && ssh-add ./id_rsa_server
-          cd -
+      - name: Init SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{secrets.SSH_DEPLOY_KEY}}
+
+      -name: Publish  
+      run: |
           scp ./build/ $SERVER:${APP_PATH}/test/
         env:
-          SSH_DEPLOY_KEY : ${{secrets.SSH_DEPLOY_KEY}}
           SERVER: ${{secrets.SERVER}}
           APP_PATH: ${{secrets.APP_PATH}}
