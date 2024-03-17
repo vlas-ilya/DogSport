@@ -30,7 +30,10 @@ jobs:
       - name: Init ssh
         run: |
           mkdir -p ~/.ssh
-          echo $SSH_DEPLOY_KEY > ~/.ssh/id_rsa
+          echo $SSH_DEPLOY_KEY > ~/.ssh/id_rsa_server
+          cd ~/.ssh
+          ssh-add -D && ssh-add ./id_rsa_server
+          cd -
           scp ./build/ $SERVER:${APP_PATH}/test/
         env:
           SSH_DEPLOY_KEY : ${{secrets.SSH_DEPLOY_KEY}}
