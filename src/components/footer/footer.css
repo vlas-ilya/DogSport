@@ -1,5 +1,6 @@
 .Footer {
     height: var(--footer-height);
+    position: relative;
 }
 
 .Footer:after {
@@ -10,6 +11,8 @@
     opacity: 0.1;
     background: url(../img/texture3.png) bottom left repeat scroll;
     min-width: var(--page-min-width);
+    top: 0;
+    z-index: -1;
 }
 
 .Footer:before {
@@ -19,4 +22,33 @@
     width: 100%;
     background: var(--footer-background);
     min-width: var(--page-min-width);
+    z-index: -1;
+}
+
+.Fooret_Content {
+    max-width: var(--page-width);
+    height: var(--footer-height);
+    margin: 0px auto;
+    display: flex;
+    opacity: 0.7;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .Fooret_Content {
+        width: 100%;
+        max-width: none;
+        margin: var(--page-margin);
+        padding: 0 25px;
+        box-sizing: border-box;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Fooret_Content {
+        padding: 0 15px;
+        margin-top: 0;
+    }
 }
