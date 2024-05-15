@@ -1,0 +1,20 @@
+.Registration {
+
+}
+
+.Registration_Title {
+    margin-bottom: 5px;
+}
+
+.Registration_Content {
+    margin-bottom: 5px;
+}
+
+.Registration_Links ul {
+    padding-inline-start: 20px;
+    list-style-type: square;
+}
+
+.Registration_Links ul li {
+    margin: 0;
+}

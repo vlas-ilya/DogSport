@@ -1,0 +1,20 @@
+<div class="Registration">
+    <div class="Registration_Title">
+        <strong>
+            <slot:title></slot:title>    
+        </strong>
+    </div>
+    <div class="Registration_Content">
+        <slot:content></slot:content>
+    </div>
+    <div class="Registration_Links">
+        <if condition="link">
+            <x-link href="{{ link }}">{{ link }}</x-link>
+        </if>
+        <else>
+            <slot:links></slot:links>
+        </else>
+    </div>
+</div>
+
+
