@@ -27,7 +27,8 @@
                 "components/seporator",
                 "components/text",
                 "components/time-line",
-                "components/registration"
+                "components/registration",
+                "components/slider"
             ]
         },
         "posthtml-beautify": {
