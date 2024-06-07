@@ -30,7 +30,8 @@
                 "components/registration",
                 "components/slider",
                 "components/sponsor",
-                "components/galery"
+                "components/galery",
+                "components/metrix"
             ]
         },
         "posthtml-beautify": {
