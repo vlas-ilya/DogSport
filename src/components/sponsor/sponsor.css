@@ -11,6 +11,17 @@
     overflow: hidden;
 }
 
+.Sponsor:hover .Sponsor_Image::before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+}
+
 .Sponsor_Image {
     max-width: var(--size);
     position: relative;
