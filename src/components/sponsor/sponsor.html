@@ -7,15 +7,15 @@
 </script>
 
 <div class="Sponsor" >
+    <if condition="link != '#'">
+        <x-link class="Sponsor_Link" href="{{ link }}">
+            <img src="./img/fi-br-link.svg" alt="Иконка для кнопки открыть ссылку">
+        </x-link>
+    </if>
     <div class="Sponsor_Image">
         <img src="{{ imageSrc }}" alt="{{ imageAlt }}">
     </div>
     <div class="Sponsor_Content">
         <slot:sponsorContent></slot:sponsorContent>
     </div>
-    <if condition="link != '#'">
-        <div class="Sponsor_Link" onclick="window.open('{{ link }}','mywindow');">
-            <img src="./img/fi-br-link.svg" alt="Иконка для кнопки открыть ссылку">
-        </div>
-    </if>
 </div>
