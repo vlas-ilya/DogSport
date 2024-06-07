@@ -28,7 +28,9 @@
                 "components/text",
                 "components/time-line",
                 "components/registration",
-                "components/slider"
+                "components/slider",
+                "components/sponsor",
+                "components/galery"
             ]
         },
         "posthtml-beautify": {
