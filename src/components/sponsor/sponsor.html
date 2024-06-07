@@ -1,0 +1,21 @@
+<script props>
+    module.exports = {
+        imageSrc: props.imageSrc,
+        imageAlt: props.imageAlt,
+        link: props.link || "#"
+    }
+</script>
+
+<div class="Sponsor" >
+    <div class="Sponsor_Image">
+        <img src="{{ imageSrc }}" alt="{{ imageAlt }}">
+    </div>
+    <div class="Sponsor_Content">
+        <slot:sponsorContent></slot:sponsorContent>
+    </div>
+    <if condition="link != '#'">
+        <div class="Sponsor_Link" onclick="window.open('{{ link }}','mywindow');">
+            <img src="./img/fi-br-link.svg" alt="Иконка для кнопки открыть ссылку">
+        </div>
+    </if>
+</div>

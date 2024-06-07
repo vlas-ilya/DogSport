@@ -10,6 +10,7 @@ html {
     --footer-background: #EBECE0;
     --transparent: #fff0;
     --shadow: 5px 8px 10px -6px #c9c9c9;
+    --shadow_hover: 15px 8px 10px -6px #c9c9c9;
     --badge_type_1_background: #FFDE82;
     --badge_type_1_background2: #917319;
     --badge_type_2_background: #F6EDD9;
